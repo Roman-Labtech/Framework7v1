@@ -1,0 +1,66 @@
+
+<div class="navbar">
+  <div class="navbar-inner">
+    <div class="left sliding"><a href="#" class="back link"> <i class="icon icon-back"></i><span></span></a></div>
+    <div class="center sliding">По основанию и высоте</div>
+    <div class="right"></div>
+  </div>
+</div>
+<div class="pages">
+  <div data-page="osn" class="page">
+    <div class="page-content">
+		<div class="content-block">
+ 	   	 <img src="res/img/Osnivysota1.jpg" style="margin: auto; display: block"><br>
+   	 По основанию и высоте<br>
+   	     <form name="form_1stor">
+			<div class="list-block">
+			  <ul>
+				<!-- Text inputs -->
+				<li>
+				  <div class="item-content">
+					<div class="item-inner">
+					  <div class="item-title label">Основание</div>
+					  <div class="item-input">
+						<input type="number" id="form_1stor1" placeholder="....">
+					  </div>
+					</div>
+				  </div>
+				</li>
+				
+				<li>
+				  <div class="item-content">
+					<div class="item-inner">
+					  <div class="item-title label">Высота</div>
+					  <div class="item-input">
+						<input type="number" id="form_1stor2" placeholder="....">
+					  </div>
+					</div>
+				  </div>
+				</li>
+				
+				</ul>
+			</div>
+                <div class="row">
+				  <div class="col-50">
+					 <a href="#" class="button button-fill color-green" onclick="func1()">ВЫЧИСЛИТЬ</a>
+				  </div>
+				  <div class="col-50">
+				   <a href="#" class="button button-fill color-red" onclick="clear1()">ОЧИСТИТЬ</a>
+				  </div>
+				</div>  
+         </form>
+         <p>
+         	Формула расчета площади треугольника по известным основанию и высоте
+         </p>
+       <img src="res/img/Osnivysota.jpg" style="margin: auto;display:block;">
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+	$$('.osn_i_vysota').on('click', function () {
+	alert("ff");
+
+	myApp.alert('Notification closed');})
+
+</script>

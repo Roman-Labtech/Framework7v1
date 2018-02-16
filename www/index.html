@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="theme-color orange" content="#fc0000">
+    <meta name="format-detection" content="telephone=no">
+    <title>Framework7 Material</title>
+    <link rel="stylesheet" href="css/framework7.material.css">
+    <link rel="stylesheet" href="css/framework7.material.colors.css">
+    <!--<link href="http://fonts.googleapis.com/css?family=Roboto:400,300,500,700" rel="stylesheet" type="text/css">-->
+    <link rel="stylesheet" href="fonts/roboto-thin.ttf">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,400" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100"  rel="stylesheet" type="text/css">
+    
+    <link rel="stylesheet" href="css/material-icons.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/icon.png">
+    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+  <script type="text/javascript" charset="utf-8">
+   
+    // Wait for device API libraries to load
+    //
+    function onLoad() {
+    navigator.splashscreen.show();   
+    animateNavBackIcon:true; 
+   // document.addEventListener("deviceready", onDeviceReady, false);    
+    };
+
+    // device APIs are available
+    //    
+    </script> 
+     
+  <script type="text/javascript" charset="utf-8" src="js/cordova_plugins.js">
+  </script>
+   <script> 
+	   document.addEventListener("deviceready", appReady, false); 
+             function appReady(){ 
+            document.addEventListener('backbutton', function (e) {
+e.preventDefault();
+/ Check for open panels /
+if ($$('.panel.active').length > 0) {
+f7.closePanel();
+return;
+}
+/ Check for go back in history /
+var view = f7.getCurrentView();
+if (!view) return;
+if (view.history.length > 1) {
+view.router.back();
+return;
+}
+Quit app /
+navigator.notification.confirm(
+‘Exit Application ?’, // message
+function (n) {
+if (n == 1) navigator.app.exitApp();
+},
+‘Bite To Eat’, // title
+['OK', ‘Cancel’] // button labels
+);
+}, false)
+
+             } </script>
+ <script>
+ 
+	 function exitFromApp()
+       {
+        navigator.app.exitApp();
+       }; 
+      </script>         
+  </head>
+  <body class="theme-orange">
+    <!-- Status bar overlay for fullscreen mode-->
+    <div class="statusbar-overlay"></div>
+    <!-- Panels overlay-->
+    <div class="panel-overlay"></div>
+    <!-- Left panel with reveal effect-->
+
+    <!-- Views-->
+    <div class="views">
+      <!-- Your main view, should have "view-main" class-->
+      <div class="view view-main">
+        <!-- Top Navbar-->
+        <div class="navbar">
+          <div class="navbar-inner">
+            <div class="center sliding"></div>
+            <div class="right"></div>
+          </div>
+        </div>
+        <!-- Pages, because we need fixed-through navbar and toolbar, it has additional appropriate classes-->
+        <div class="pages navbar-through toolbar-through">
+          <!-- Index Page-->
+          <div data-page="index" class="page">
+            <div class="page-content">       
+              <div class="content-block">
+                <div class="content-block-inner">
+                 <h2 style="text-align: center"> Расчет площади треугольника </h2>
+                  <p style="text-align: justify">Данный калькулятор позволит легко расчитать площадь треугольника по известным величинам</p>
+                  
+                                
+<div class="list-block media-list">
+  <ul>
+    <li>
+      <a href="osn.html" onclick="xx()" class="item-link item-content">
+        <div class="item-inner">
+          <div class="item-title-row">
+            <div class="item-title bold-text">По основанию и высоте</div>
+            <div class="item-after"></div>
+          </div>
+          <div class="item-text">Формула нахождения площади треугольника по основанию и высоте</div>
+        </div>
+      </a>
+    </li>
+	<li>
+      <a href="3stor.html" class="item-link item-content">
+        <div class="item-inner">
+          <div class="item-title-row">
+            <div class="item-title bold-text" >По трем сторонам</div>
+            <div class="item-after"></div>
+          </div>
+          <div class="item-text">Формула Герона нахождения площади треугольника по трем извесным сторонам</div>
+        </div>
+      </a>
+    </li>
+    <li>
+      <a href="2stor.html" class="item-link item-content">
+        <div class="item-inner">
+          <div class="item-title-row">
+            <div class="item-title bold-text" >По 2-м сторонам и углу между ними</div>
+            <div class="item-after"></div>
+          </div>
+          <div class="item-text">Формула нахождения площади треугольника по двум сторонам и углу между ними</div>
+        </div>
+      </a>
+    </li>
+   </ul>
+</div>        
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Path to Framework7 Library JS-->
+    <script type="text/javascript" src="js/framework7.js"></script>
+    <script type="text/javascript" src="js/my-app.js"></script>      
+    <script type="text/javascript" src="cordova.js"></script> 
+  </body>
+</html>
