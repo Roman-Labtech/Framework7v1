@@ -1500,7 +1500,7 @@ html:not(.watch-active-state) .tabbar a.tab-link:active,
 .navbar-fixed.view .page-content,
 .navbar-through.view .page-content {
   padding-top: 56px;
-background: url(res/img/bg.png);	
+background: url(img/bg.png);	
 }
 .navbar-fixed.toolbar-fixed .page-content,
 .navbar-through.toolbar-fixed .page-content,
