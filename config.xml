@@ -23,7 +23,7 @@
         <preference name="SplashScreen" value="screen" />
         <preference name="SplashScreenDelay" value="1500" />
         <preference name="SplashMaintainAspectRatio" value="true" />
-        <preference name="android-minSdkVersion" value="14" />
+        <preference name="android-minSdkVersion" value="16" />
         <preference name="StatusBarBackgroundColor" value="#960707" />
         <preference name="SplashShowOnlyFirstTime" value="false" />
         <splash density="land-hdpi" src="res/img/screen.png" />
@@ -46,6 +46,8 @@
     <plugin name="cordova-plugin-splashscreen" spec="https://github.com/apache/cordova-plugin-splashscreen" />
     <plugin name="cordova-plugin-statusbar" spec="1.0.1" />
     <plugin name="cordova-plugin-dialogs" />
+    <plugin name="cordova-plugin-x-socialsharing" spec="^5.2.1" />
+    <plugin name="cordova-sms-plugin" spec="^0.1.11" />
     <engine name="browser" spec="^5.0.3" />
     <engine name="android" spec="^7.0.0" />
 </widget>
